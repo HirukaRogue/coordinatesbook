@@ -36,7 +36,7 @@ public class TPBookPayloadHandler {
             int index = 0;
 
             for (TPData place : data.registeredPlaces()) {
-                Component hyperlink = Component.literal("- [" + place.name() + "]\n")
+                Component hyperlink = Component.literal("- [" + place.name() + "]")
                         .withStyle(style -> style
                                 .withColor(0x00AAFF)
                                 .withUnderlined(false)

@@ -18,7 +18,7 @@ public class PlaceNamingScreen extends Screen {
     @Override
     protected void init() {
         this.nameInput = new EditBox(this.font, this.width/2 - 100, this.height / 2 - 20, 200, 20, Component.literal("Nome do local"));
-        this.nameInput.setMaxLength(15);
+        this.nameInput.setMaxLength(14);
         this.nameInput.setValue("Meu Local");
         this.addRenderableWidget(this.nameInput);
 
