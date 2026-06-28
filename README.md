@@ -3,7 +3,7 @@ Livro espiritual do Riftwalker
 =======
 
 Esse mod é de um livro onde você registra o local onde você tá com coordenadas 
-e ele será registrado para te premitir que você se teleporte para estes locais
+e ele será registrado para te permitir que você se teleporte para estes locais
 clicando neles no livro.
 
 Funcionalidades
@@ -18,7 +18,7 @@ Como usar o livro
 
 É bem simples
 
-Se você quizer salvar uma localização:
+Se você quiser salvar uma localização:
 - você aperta shift+clique direito
 - Irá aparecer um pop up com uma caixa para digitar o nome da localização, digite o nome e depois clique em confirmar
 - Após isso o local fica salvo
