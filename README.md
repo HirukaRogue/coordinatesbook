@@ -1,25 +1,45 @@
 
-Installation information
+Livro espiritual do Riftwalker
 =======
 
-This template repository can be directly cloned to get you started with a new
-mod. Simply create a new repository cloned from this one, by following the
-instructions provided by [GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template).
+Esse mod é de um livro onde você registra o local onde você tá com coordenadas 
+e ele será registrado para te premitir que você se teleporte para estes locais
+clicando neles no livro.
 
-Once you have your clone, simply open the repository in the IDE of your choice. The usual recommendation for an IDE is either IntelliJ IDEA or Eclipse.
+Funcionalidades
+=======
+Possui apenas essas seguintes funcionalidades
+- Salvar coordenadas de uma localização com nome e como comando de /tp
+- Abrir um livro onde você teleporta para um local salvo no livro
+- ou apagar uma localização salva no livro
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
+Como usar o livro
+=======
 
-Mapping Names:
+É bem simples
+
+Se você quizer salvar uma localização:
+- você aperta shift+clique direito
+- Irá aparecer um pop up com uma caixa para digitar o nome da localização, digite o nome e depois clique em confirmar
+- Após isso o local fica salvo
+
+Se você quizer se teleportar para algum lugar ou excluir as coordenadas de algum lugar:
+- aperte clique direito
+- você abrirá uma GUI de um livro vanilla com todas as localizações salvas
+- para teleportar clique na localização
+- para deletar a localização, clique no X
+
+Obs.: Você precisa ter permissão para usar o comando /tp para poder usar
+
+Versões usadas
 ============
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license. For the latest license text, refer to the mapping file itself, or the reference copy here:
-https://github.com/NeoForged/NeoForm/blob/main/Mojang.md
+Minecraft: 1.21.1
+Neoforge: 21.1.233
+Java: Eclipse Termurin 21.0.9
 
-Additional Resources: 
-==========
-Community Documentation: https://docs.neoforged.net/  
-NeoForged Discord: https://discord.neoforged.net/
+Comandos (Opcional)
+============
+`/coordinates delete <index>`
+Onde index é o indice de lugar que você quer apagar
+Sendo bem sincero, não sei por que você iria querer apagar manualmente quando você
+Pode simplesmente clicar no Xzinho dentro do livro

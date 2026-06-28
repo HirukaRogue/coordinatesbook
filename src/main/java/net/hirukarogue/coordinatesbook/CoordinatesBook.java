@@ -42,20 +42,28 @@ public class CoordinatesBook {
     public static final Logger LOGGER = LogUtils.getLogger();
 
     public CoordinatesBook(IEventBus modEventBus, ModContainer modContainer) {
+        //essa parte é sempre importante para salvar tudo, tudo que você fizer
+        //fazendo mod você salva aqui
 
+        //registro do livro
         ItemRegistry.register(modEventBus);
 
+        //registro dos dados
         TPDataComponents.register(modEventBus);
 
+        //registro de eventos de network
         modEventBus.addListener(TPBookEvents::registerNetworkStuff);
 
+        //registro dos comandos novos
         TPBookCommandEvents commandEvents = new TPBookCommandEvents();
         NeoForge.EVENT_BUS.addListener(commandEvents::onRegisterCommands);
 
+
+        //resto, basicamente tudo que vem por padrão do neoforge que é
+        //cruxial para que o mod funcione
         modEventBus.addListener(this::commonSetup);
 
         NeoForge.EVENT_BUS.register(this);
-
 
         modEventBus.addListener(this::addCreative);
 
@@ -69,6 +77,7 @@ public class CoordinatesBook {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        //para o livro aparecer no criativo, isso aqui é nescessário
         if (event.getTabKey() == CreativeModeTabs.COMBAT) {
             event.accept(ItemRegistry.TPBOOK);
         }

@@ -13,22 +13,27 @@ import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
+//aqui é onde ficam os eventos do livro
 public class TPBookEvents {
     public static void registerNetworkStuff(final RegisterPayloadHandlersEvent event) {
+        //payload dos registros
         final PayloadRegistrar registrar = event.registrar("1.0.0");
 
+        //registro dos lugares salvos
         registrar.playToClient(
                 CoordinateList.TYPE,
                 CoordinateList.CODEC,
                 TPBookPayloadHandler::handleTPDataNetwork
         );
 
+        //registro do pop up
         registrar.playToClient(
                 OpenNamingScreenPayload.TYPE,
                 OpenNamingScreenPayload.CODEC,
                 TPBookPayloadHandler::handleOpenNamingScreen
         );
 
+        //registro da registragem do lugar
         registrar.playToServer(
                 ConfirmRegistrationPayload.TYPE,
                 ConfirmRegistrationPayload.CODEC,
