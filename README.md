@@ -40,6 +40,6 @@ Java: Eclipse Termurin 21.0.9
 Comandos (Opcional)
 ============
 `/coordinates delete <index>`
-Onde index é o indice de lugar que você quer apagar
+Onde index é o indice de lugar que você quer apagar.
 Sendo bem sincero, não sei por que você iria querer apagar manualmente quando você
 Pode simplesmente clicar no Xzinho dentro do livro
